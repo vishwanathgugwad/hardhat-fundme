@@ -1,0 +1,40 @@
+{
+  "name": "Hardhat-FundMe-project",
+
+  "devDependencies": {
+    "@chainlink/contracts": "^0.4.2",
+    "@ethersproject/abi": "^5.4.7",
+    "@ethersproject/providers": "^5.4.7",
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^1.0.1",
+    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers",
+    "@nomiclabs/hardhat-etherscan": "^3.0.0",
+    "@typechain/ethers-v5": "^10.1.0",
+    "@typechain/hardhat": "^6.1.2",
+    "chai": "^4.2.0",
+    "ethers": "^5.6.9",
+    "hardhat": "^2.10.1",
+    "hardhat-deploy": "^0.11.12",
+    "hardhat-gas-reporter": "^1.0.8",
+    "solidity-coverage": "^0.7.21",
+    "typechain": "^8.1.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "solc": "^0.8.15",
+    "solhint": "^3.3.7"
+  },
+  "scripts": {
+    "test" : "yarn hardhat test",
+    "staging" : "yarn hardhat test --network rinkeby",
+    "node" : "yarn hardhat node",
+    "deploy" : "yarn hardhat deploy",
+    "fund" : "yarn hardhat run scripts/fund.js",
+    "withdraw" : "yarn hardhat run scripts/withdraw.js",
+    "lint" : "yarn solhint 'contracts/*.sol'",
+    "lint:fix" : "yarn solhint 'contracts/*.sol' --fix",
+    "format" : "yarn prettier --write .",
+    "coverage" : "yarn hardhat coverage"
+}
+}
